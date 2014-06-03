@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'tweet/index'
+
+  get 'tweet/new'
+  
+   post 'tweet/update'
+
+  devise_for :users
   get '/about' =>'home#about'
 
   root 'home#index'

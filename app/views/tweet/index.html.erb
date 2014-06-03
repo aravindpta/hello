@@ -1,0 +1,10 @@
+<h1>Tweet#index</h1>
+<div id='new_link_div'>
+   <%= link_to 'create Tweet', '/tweet/new/', class: 'btn btn-info',remote: true %>
+  </div>
+   <br><br>
+ <table class="table table-striped">
+ 	<%= render @tweets %>
+ </table>
+
+ 

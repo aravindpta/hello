@@ -52,6 +52,14 @@
               <li><%= link_to "index", "/index"  %></li>
               <li><%= link_to "about", "/about"  %></li>
               <li><%= link_to "faq", "/faq"  %></li>
+              <% if !current_user %>
+
+              <li><%= link_to "signin","/users/sign_in" %></li>
+              <li><%= link_to "signup","/users/sign_up" %></li>
+
+              <% else %>
+               <li><%=link_to "logout","/users/sign_out",method: :delete %></li> 
+              <% end %> 
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -66,7 +74,7 @@
           </div>
           <div class="span3">
             <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
+              
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
                 <li><%= link_to "Link1", "/path1"  %></li>
